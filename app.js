@@ -22,4 +22,4 @@ app.use("/api", booksRouter);
 
 const port = 8000;
 
-app.listen(port, () => console.log(`LISNING TO PORT ${port}!!!`));
+app.listen(port,"0.0.0.0", () => console.log(`LISNING TO PORT ${port}!!!`));
