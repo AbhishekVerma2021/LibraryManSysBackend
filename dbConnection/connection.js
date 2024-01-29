@@ -1,5 +1,5 @@
 const mongoose =require('mongoose');
-const db ='mongodb+srv://abhishek-verma:Nis12341234@cluster0.aagekjb.mongodb.net/?retryWrites=true&w=majority/LIBRARYDATA';
+const db ='mongodb+srv://abhishek-verma:Nis12341234@cluster0.aagekjb.mongodb.net/LIBRARYDATA?retryWrites=true&w=majority';
 mongoose.connect(db,{
     useNewUrlParser:true,
     useUnifiedTopology:true
