@@ -93,8 +93,8 @@ const loginUser = async (req, res) => {
             }
             else {
               const userWithBooks = await Users.findById(user._id).populate('books');
-
-              return res.status(200).json({ user: userWithBooks, token });
+              const { password, ...userWithoutPassword } = userWithBooks;
+              return res.status(200).json({ user: userWithoutPassword, token });
             };
           });
         };
@@ -115,7 +115,7 @@ const validateToken = async (req, res) => {
       user: userWithBooks,
     });
   }
-  catch(err) {
+  catch (err) {
     res.status(500).json({
       error: err,
       message: 'Internal Server Error!!',
